@@ -1,0 +1,15 @@
+#version 120 core
+
+uniform sampler2D tex;
+
+in vec3 color;
+in vec3 norm;
+in vec2 uv;
+
+out vec4 out_Color;
+
+void main(void){
+	vec4 colort = texture2D(tex,uv);
+	out_Color = vec4(colort);
+
+}
